@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Setup Rust
         uses: ATiltedTree/setup-rust@v1.0.5
+        with:
+          rust-version: stable
       - name: check out
         uses: actions/checkout@v3.3.0
       - name: install mdbook
