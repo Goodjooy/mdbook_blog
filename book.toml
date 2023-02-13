@@ -13,7 +13,8 @@ create-missing = true
 [output.html]
 default-theme = "rust"
 mathjax-support = true
-additional-js = ["./js/add_root_info.js"]
+additional-css = []
+additional-js = []
 no-section-label = true
 
 [output.html.print]
