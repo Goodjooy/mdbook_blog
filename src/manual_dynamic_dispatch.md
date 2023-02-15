@@ -499,7 +499,7 @@ impl Drop for DynDispatch {
 }
 ```
 
-## Oops! Undefine Behaver
+## Oops! Undefined Behavior
 
 接下来我们准备另一个测试用例
 
