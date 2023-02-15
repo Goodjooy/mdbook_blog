@@ -15,3 +15,5 @@
   - [0.5.1更新](./axum-starter/0.5.1.md)
 
 ---
+
+- [手动完成动态分发初体验](./manual_dynamic_dispatch.md)
