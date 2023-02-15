@@ -388,8 +388,7 @@ The following memory was leaked: alloc2205 (Rust heap, size: 12, align: 1) {
 }
 ```
 
-重新检查我们的代码，很容易就能发现，当我们实现 `Drop` 时，并没有同时调用内部那个被抹除了类型的对象的`Drop` 函数
-因此，我们的虚函数表中也必须记录 `Drop` 的函数指针，以在 drop 时能够正确地释放内存
+重新检查我们的代码，很容易就能发现，当我们实现 `Drop` 时，并没有同时调用内部那个被抹除了类型的对象的`Drop` 函数。 因此，我们的虚函数表中也必须记录 `Drop` 的函数指针，以在 drop 时能够正确地释放内存
 
 首先，调整 `DataEntryRaw` 的实现，以添加 `drop` 函数指针
 
@@ -654,4 +653,7 @@ impl DynDispatch {
 
 所有的代码可以在 [playgound](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=b8675fcd06a3e955cc0b17012ab64e11) 中找到
 
+---
+
 作者亦为 Rust 新手，如有错漏，可以通过本 blog 相关的[github](https://github.com/Goodjooy/mdbook_blog/issues)项目发起 issue
+转载请标记出处
